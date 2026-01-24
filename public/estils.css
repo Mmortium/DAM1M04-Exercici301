@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+}
+
+.badge.small {
+  color: green;
+  font-weight: bold;
+}
+
+.badge.big {
+  color: blue;
+  font-weight: bold;
+}
