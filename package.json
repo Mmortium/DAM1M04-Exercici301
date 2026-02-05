@@ -1,26 +1,24 @@
 {
-  "name": "dam1m04-exercici301",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mmortium/DAM1M04-Exercici301.git"
+    "dev": "node --watch --watch-path ./server ./server/app.js",
+    "pm2start": "pm2 start ./server/app.js --name app",
+    "pm2stop": "pm2 stop app",
+    "pm2restart": "pm2 restart app",
+    "pm2delete": "pm2 delete app",
+    "pm2list": "pm2 list",
+    "pm2logs": "pm2 logs app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Mmortium/DAM1M04-Exercici301/issues"
-  },
-  "homepage": "https://github.com/Mmortium/DAM1M04-Exercici301#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "hbs": "^4.2.0"
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0",
+    "pm2": "^6.0.14"
   }
 }
