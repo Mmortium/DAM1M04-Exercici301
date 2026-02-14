@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe de Ciutats</title>
+    <link rel="stylesheet" href="/estils.css">
+</head>
+<body>
+    {{> header}}
+
+    <h1>Informe de Ciutats</h1>
+
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Ciutat</th>
+                <th>País</th>
+                <th>Població</th>
+                <th>Costanera?</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cities}}
+            <tr>
+                {{!-- 1. Nombre de la ciudad --}}
+                <td>{{name}}</td>
+
+                {{!-- 2. Buscar el nombre del país usando lookup --}}
+                <td>
+                    {{#with (lookup ../countries countryCode)}}
+                        {{name}}
+                    {{/with}}
+                </td>
+
+                {{!-- 3. Población con color condicional usando el helper 'lte' --}}
+                <td style="color: {{#if (lte population 800000)}}green{{else}}red{{/if}};">
+                    {{population}}
+                </td>
+
+                {{!-- 4. Mostrar si es costanera o no --}}
+                <td>
+                    {{#if coastal}} Sí 🌊 {{else}} No 🏔️ {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

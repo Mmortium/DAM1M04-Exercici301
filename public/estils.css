@@ -1,0 +1,5 @@
+body { font-family: sans-serif; margin: 20px; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid #ddd; padding: 12px; }
+th { background-color: #f4f4f4; }
+/* Las clases de colores las estamos controlando por ahora desde el .hbs con style directo */
