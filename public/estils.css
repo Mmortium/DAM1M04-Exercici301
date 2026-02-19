@@ -2,4 +2,67 @@ body { font-family: sans-serif; margin: 20px; }
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 th, td { border: 1px solid #ddd; padding: 12px; }
 th { background-color: #f4f4f4; }
-/* Las clases de colores las estamos controlando por ahora desde el .hbs con style directo */
+
+.aviso-box {
+    background-color: #ffcccc;
+    padding: 15px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+
+.pie-pagina {
+    margin-top: 50px;
+    font-size: 0.8em;
+    color: #666;
+}
+/* Estil per a la barra de navegació */
+.menu-principal {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estil per als enllaços del menú */
+.enllac-menu {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* canviar de color quan passes per sobre */
+.enllac-menu:hover {
+    text-decoration: underline;
+    color: #754bdf;
+}
+
+/* Configuración general de la tabla */
+.tabla-informe {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Bordes para celdas y cabecera */
+.tabla-informe th, .tabla-informe td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Color de fondo para la cabecera */
+.tabla-informe thead tr {
+    background-color: #f2f2f2;
+}
+
+/* --- CLASES CONDICIONALES PARA POBLACIÓN --- */
+
+.poblacio-baixa {
+    color: green;
+    font-weight: bold; 
+}
+
+.poblacio-alta {
+    color: red;
+    font-weight: bold;
+}

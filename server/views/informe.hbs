@@ -10,9 +10,9 @@
 
     <h1>Informe de Ciutats</h1>
 
-    <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+    <table class="taula-informe">
         <thead>
-            <tr style="background-color: #f2f2f2;">
+            <tr>
                 <th>Ciutat</th>
                 <th>País</th>
                 <th>Població</th>
@@ -33,7 +33,7 @@
                 </td>
 
                 {{!-- 3. Población con color condicional usando el helper 'lte' --}}
-                <td style="color: {{#if (lte population 800000)}}green{{else}}red{{/if}};">
+                <td class = "{{#if (lte population 800000)}}green{{else}}red{{/if}};">
                     {{population}}
                 </td>
 
