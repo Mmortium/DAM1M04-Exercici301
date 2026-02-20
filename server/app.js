@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // --- REGISTRAR HELPERS ---
-// El profesor puso 'gt' (greater than), pero tu ejercicio pide 'lte' (less than or equal)
+// ejercicio pide 'lte' (less than or equal)
 hbs.registerHelper('lte', (a, b) => a <= b);
 
 // --- REGISTRAR PARTIALS ---
