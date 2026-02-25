@@ -32,10 +32,15 @@
                     {{/with}}
                 </td>
 
-                {{!-- 3. Población con color condicional usando el helper 'lte' --}}
-                <td class = "{{#if (lte population 800000)}}green{{else}}red{{/if}};">
-                    {{population}}
-                </td>
+                {{!-- 3. Población con tamaño condicional usando el helper 'lte' --}}
+                <td class="{{#if (lte population 800000)}}poblacio-baixa{{else}}poblacio-alta{{/if}}"> 
+                    {{#if (lte population 800000)}}
+                        Petita
+                    {{else}}
+                        Gran
+                    {{/if}}
+                        ({{population}})
+                </td> 
 
                 {{!-- 4. Mostrar si es costanera o no --}}
                 <td>
