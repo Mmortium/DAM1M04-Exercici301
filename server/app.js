@@ -27,7 +27,7 @@ app.set('view engine', 'hbs');
 hbs.registerHelper('lte', (a, b) => a <= b);
 
 // --- REGISTRAR PARTIALS ---
-hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 // --- RUTA / (Página principal) ---
 app.get('/', (req, res) => {
